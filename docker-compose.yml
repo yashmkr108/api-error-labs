@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: api-error-lab
+    environment:
+      POSTGRES_DB: api-error-lab
+      POSTGRES_USER: api-error-lab
+      POSTGRES_PASSWORD: api-error-lab
+    ports:
+      - "5432:5432"
+    volumes:
+      - api_error_lab_data:/var/lib/postgresql/data
+
+volumes:
+  api_error_lab_data:
